@@ -6,11 +6,12 @@ zaehler = 0 #  variabel
 keys = [] #  liste erstellen
 
 def on_press(key):
-    global keys, zaehler
+    global keys, zaehler  # Deklariert die Variablen "keys" und "zaehler" als global um sie außerhalb der Funktion verwenden zu können.
 
-    keys.append(key)
-    zaehler += 1
-    print("{0} pressed".format(key))
+    keys.append(key)  # Fügt das übergebene "key"-Objekt zur Liste "keys" hinzu.
+    zaehler += 1  # erhöt den Wert von "zaehler" um 1.
+    print("{0} pressed".format(key))  # Meldet dass der übergebene Schlüssel gedrückt wurde.
+
 
     if zaeler >= 10: # für jede gedrückte taste wird +1 gezaehlt
         zaehler = 0 #  resetet den zaehler
